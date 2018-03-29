@@ -10,6 +10,7 @@ namespace windseekerapp.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public virtual DbSet<Spot> Spots {get; set;}
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
